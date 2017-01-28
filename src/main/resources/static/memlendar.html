@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/monthly.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/monthly.js"></script>
+    <script type="text/javascript" src="js/addEvent.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#mycalendar').monthly();
+        });
+    </script>
+</head>
+<body>
+<div id="ijk" style="width: 20px; height: 20px; background-color: green;"></div>
+<div class="monthly" id="mycalendar" style="width: 100%; max-width: 600px; display: inline-block;" ></div>
+
+
+</body>
+</html>

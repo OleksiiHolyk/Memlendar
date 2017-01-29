@@ -18,23 +18,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests()
-                .antMatchers("/css/**", "/images/**", "/favicon.ico","/favicon-16x16.png","/memlendar.html").permitAll()
-                .antMatchers("/js/**").permitAll()
-                .anyRequest().fullyAuthenticated()
+                    .authorizeRequests()
+                    .antMatchers("/css/**", "/images/**", "/favicon.ico","/favicon-16x16.png").permitAll()
+                    .antMatchers("/js/**", "index.html").permitAll()
+//                    .anyRequest().fullyAuthenticated()
+//                    .anyRequest().authenticated()
                 .and()
-                .formLogin()
-                .loginPage("/login")
-                .defaultSuccessUrl("/", true)
-                .failureUrl("/login?error").permitAll()
+                    .formLogin()
+                    .loginPage("/login")
+                    .defaultSuccessUrl("/", true)
+                    .failureUrl("/login?error").permitAll()
                 .and()
-                .logout()
-                .logoutUrl("/logout")
-                .invalidateHttpSession(true)
-                .logoutSuccessUrl("/")
-                .deleteCookies("JSESSIONID")
+                    .logout()
+                    .logoutUrl("/logout")
+                    .invalidateHttpSession(true)
+                    .logoutSuccessUrl("/")
+                    .deleteCookies("JSESSIONID")
                 .and()
-                .csrf().disable();
+                    .csrf().disable();
     }
 
     @Autowired

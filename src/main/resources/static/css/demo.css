@@ -165,5 +165,5 @@ body {
 }
 
 .custom-calendar-full{
-    top: 0;
+    top: 0 !important;
 }

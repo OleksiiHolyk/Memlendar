@@ -1,7 +1,6 @@
 /* General Demo Style */
 /*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
 
-
 html {
     height: 100%;
 }
@@ -135,4 +134,32 @@ a {
 .codrops-demos a.current-demo:hover {
     color: rgba(255, 255, 255, 0.5);
     border-color: rgba(255, 255, 255, 0.5);
+}
+
+/*custom css*/
+
+body {
+    background: #fff !important;
+}
+
+.fc-head {
+    color: #fff !important;
+    background-color: #eb4e2f !important;
+    border-radius: 0 !important;
+}
+
+.fc-date {
+    color: #000 !important;
+}
+
+.fc-row > div {
+    border: 1px solid #ddd !important;
+}
+
+.custom-month-year, .custom-year span:before, .custom-prev span:before, .custom-next span:before, .custom-current span:before {
+    color: #000 !important;
+}
+
+.custom-header h2{
+    color: #000 !important;
 }

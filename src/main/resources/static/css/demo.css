@@ -163,3 +163,7 @@ body {
 .custom-header h2{
     color: #000 !important;
 }
+
+.custom-calendar-full{
+    top: 0;
+}

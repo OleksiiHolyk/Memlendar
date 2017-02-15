@@ -1,4 +1,4 @@
-package ua.com;
+package ua.com.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/adminForm.html", true)
+                .defaultSuccessUrl("/memlendarItems", true)
                 .permitAll()
                 .and()
             .logout()
